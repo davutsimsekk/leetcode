@@ -3,8 +3,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in range(nums.count(0)):
-            for i in range (len(nums)-1):
-                while nums[i]==0 and nums[i+1]!=0:
-                    nums[i],nums[i+1]=nums[i+1],nums[i]  
-
+        num_of_zero=nums.count(0)
+        for i in range(num_of_zero):
+            nums.remove(0)
+            nums.append(0)
